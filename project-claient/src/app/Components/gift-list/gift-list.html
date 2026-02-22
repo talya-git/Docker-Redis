@@ -1,0 +1,154 @@
+<div class="main-page-container">
+  
+  <div class="header-section">
+    <h1>קטלוג המתנות היוקרתי</h1>
+    <div class="divider"></div>
+  </div>
+
+  <div class="luxury-filter-bar">
+    <div class="filter-group">
+      
+      <mat-form-field appearance="outline" class="modern-field compact">
+        <mat-icon matPrefix>search</mat-icon>
+        <mat-label>חפש מתנה</mat-label>
+        <input matInput [(ngModel)]="filterName" (input)="getByName(filterName)" placeholder="הכנס שם...">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="modern-field compact">
+        <mat-icon matPrefix>person_search</mat-icon>
+        <mat-label>שם תורם</mat-label>
+        <input matInput [(ngModel)]="filterDonor" (change)="getByDonor(filterDonor)" placeholder="חפש תורם...">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="modern-field compact">
+        <mat-icon matPrefix>analytics</mat-icon>
+        <mat-label>מינימום רכישות</mat-label>
+        <input matInput type="number" [(ngModel)]="filterCount" (change)="GetByPurchasesCount(filterCount)">
+      </mat-form-field>
+
+    </div>
+
+    <div class="filter-actions">
+      <button mat-flat-button class="btn-sort" (click)="giftExpensive()">
+        <mat-icon>diamond</mat-icon>
+        הכי יקרות
+      </button>
+
+      <button mat-icon-button class="btn-refresh" (click)="loadAllGifts()" title="נקה הכל">
+        <mat-icon>refresh</mat-icon>
+      </button>
+    </div>
+  </div>
+
+  <div class="gifts-grid">
+    <mat-card class="luxury-card-small" *ngFor="let g of arrGift">
+      
+      <div class="gift-image-wrapper" [class.sold-out]="hasWinner(g)">
+        <div class="drawn-ribbon" *ngIf="hasWinner(g)">הוגרל</div>
+        <img *ngIf="g.giftImage" mat-card-image [src]="'/' + g.giftImage" [alt]="g.name" class="gift-img">
+        <div *ngIf="!g.giftImage" class="no-image">
+          <mat-icon>card_giftcard</mat-icon>
+        </div>
+      </div>
+
+      <div class="category-tag">{{g.category}}</div>
+      
+      <mat-card-header>
+        <mat-card-title>{{g.name}}</mat-card-title>
+        <mat-card-subtitle>{{g.donorName}}</mat-card-subtitle>
+      </mat-card-header>
+
+      <mat-card-content>
+        <div class="price-section-small">
+          <span class="amount">{{g.priceCard}} ₪</span>
+        </div>
+      </mat-card-content>
+
+      <mat-card-actions>
+        <div class="winner-display-box" *ngIf="hasWinner(g)">
+          <mat-icon>workspace_premium</mat-icon>
+          <div class="winner-details">
+            <span class="win-label">הזוכה:</span>
+            <span class="win-name">{{ g.customerName }}</span>
+          </div>
+        </div>
+
+        <button mat-flat-button class="buy-now-btn-small" 
+                *ngIf="!hasWinner(g) && authSrv.isCustomer()" 
+                (click)="addToCart(g)">
+          כרטיס הגרלה
+        </button>
+
+        <div class="admin-toolbar-compact" *ngIf="authSrv.isAdmin()">
+          <button mat-icon-button class="action-btn winner-gold" 
+                  *ngIf="!hasWinner(g)" 
+                  (click)="Winner(g.id)" 
+                  title="בצע הגרלה">
+            <mat-icon>emoji_events</mat-icon>
+          </button>
+          
+          <button mat-icon-button class="action-btn edit" (click)="updateGift(g)" title="עריכה">
+            <mat-icon>edit</mat-icon>
+          </button>
+          
+          <button mat-icon-button class="action-btn delete" (click)="removeGift(g)" title="מחיקה">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </div>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+  <div class="modal-overlay" *ngIf="showAddForm">
+    <div class="modern-modal-card">
+      <div class="modern-modal-header">
+        <div class="header-title">
+          <div class="gold-accent"></div>
+          <h3>עריכת פרטי מתנה</h3>
+        </div>
+        <button class="close-btn" (click)="closeEdit()">
+          <mat-icon>close</mat-icon>
+        </button>
+      </div>
+
+      <div class="modern-modal-body">
+        <div class="field-wrapper">
+          <span class="input-label">שם המתנה</span>
+          <mat-form-field appearance="outline" class="modern-field">
+            <mat-icon matPrefix>card_giftcard</mat-icon>
+            <input matInput [(ngModel)]="gift.name" placeholder="הכנס שם מתנה...">
+          </mat-form-field>
+        </div>
+
+        <div class="field-wrapper">
+          <span class="input-label">שם התורם</span>
+          <mat-form-field appearance="outline" class="modern-field">
+            <mat-icon matPrefix>person</mat-icon>
+            <input matInput [(ngModel)]="gift.donorName" placeholder="שם התורם...">
+          </mat-form-field>
+        </div>
+
+        <div class="field-wrapper">
+          <span class="input-label">מחיר כרטיס</span>
+          <mat-form-field appearance="outline" class="modern-field">
+            <mat-icon matPrefix>payments</mat-icon>
+            <input matInput type="number" [(ngModel)]="gift.priceCard" placeholder="0.00">
+          </mat-form-field>
+        </div>
+
+        <div class="field-wrapper">
+          <span class="input-label">קישור לתמונה</span>
+          <mat-form-field appearance="outline" class="modern-field">
+            <mat-icon matPrefix>image</mat-icon>
+            <input matInput [(ngModel)]="gift.giftImage" placeholder="URL של התמונה...">
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="modern-modal-actions">
+        <button mat-button class="btn-cancel" (click)="closeEdit()">ביטול</button>
+        <button mat-raised-button class="btn-save" (click)="saveUpdate()">שמור שינויים</button>
+      </div>
+    </div>
+  </div>
+</div>

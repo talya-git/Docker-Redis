@@ -1,0 +1,132 @@
+<div class="luxury-dashboard" dir="rtl">
+  
+  <header class="dashboard-header">
+    <div class="header-content">
+      <h1 class="gold-gradient-text">מרכז בקרה יוקרתי</h1>
+      <p class="subtitle">ניהול רכישות ומעקב הכנסות בזמן אמת</p>
+    </div>
+    <button class="refresh-btn" (click)="getAll()">
+      <mat-icon>cached</mat-icon>
+      <span>רענן נתונים</span>
+    </button>
+  </header>
+
+  <main class="dashboard-content">
+    @if (authSrv.isCustomer()) {
+      <div class="luxury-card full-width animate-fade-in">
+        <div class="card-header">
+          <div class="icon-box gold-bg">
+            <mat-icon>shopping_bag</mat-icon>
+          </div>
+          <h2>הסל המאובטח שלי</h2>
+        </div>
+        <div class="table-responsive">
+          <table class="luxury-table">
+            <thead>
+              <tr>
+                <th>מתנה</th>
+                <th>כמות</th>
+                <th>סה"כ</th>
+                <th>סטטוס</th>
+                <th>פעולה</th>
+              </tr>
+            </thead>
+            <tbody>
+              @for (item of arrDetailsByGiftId; track item.id) {
+                <tr class="table-row">
+                  <td class="primary-cell">{{ item.giftName }}</td>
+                  <td><span class="qty-badge">{{ item.quntity }}</span></td>
+                  <td class="price-cell">{{ item.giftPrice * item.quntity }} ₪</td>
+                  <td>
+                    <span class="status-pill" [ngClass]="item.status === 'Confirmed' ? 'confirmed' : 'pending'">
+                      {{ item.status === 'Confirmed' ? 'מאושר' : 'ממתין' }}
+                    </span>
+                  </td>
+                  <td>
+                    @if (item.status === 'Draft') {
+                      <button class="gold-action-btn" (click)="ConfirmPurchase(item.id)">💳 שלם עכשיו</button>
+                    }
+                  </td>
+                </tr>
+              }
+            </tbody>
+          </table>
+        </div>
+        <div class="card-footer">
+          <div class="total-box">
+            <span class="label">לתשלום כולל:</span>
+            <span class="value">{{ totalAmount }} ₪</span>
+          </div>
+        </div>
+      </div>
+    }
+
+    @if (authSrv.isAdmin()) {
+      <div class="admin-grid">
+        <section class="luxury-card animate-fade-in">
+          <div class="card-header">
+            <div class="icon-box gold-outline">
+              <mat-icon>verified</mat-icon>
+            </div>
+            <h3>אישור סטטוסים</h3>
+          </div>
+          <div class="table-scroll">
+            <table class="luxury-table compact">
+              <thead>
+                <tr>
+                  <th>לקוח</th>
+                  <th>מתנה</th>
+                                      @if(!authSrv.isAdmin()){
+
+                  <th>פעולה</th>}
+                </tr>
+              </thead>
+              <tbody>
+                @for (item of arrDetailsByGiftId; track item.id) {
+                  <tr class="table-row">
+                    <td>{{ item.customerName || 'אורח' }}</td>
+                    <td class="gold-text">{{ item.giftName }}</td>
+                                        @if(!authSrv.isAdmin()){
+
+                    <td>
+                      <button class="approve-btn" (click)="ConfirmPurchase(item.id)">אשר ✅</button>
+                    </td>}
+                  </tr>
+                }
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="luxury-card animate-fade-in delay-1">
+          <div class="card-header">
+            <div class="icon-box gold-outline">
+              <mat-icon>insights</mat-icon>
+            </div>
+            <h3>פירוט הכנסות</h3>
+          </div>
+          <div class="table-scroll">
+            <table class="luxury-table compact">
+              <thead>
+                <tr>
+                  <th>לקוח</th>
+                  <th>מתנה</th>
+                  <th>סה"כ</th>
+                </tr>
+              </thead>
+              <tbody>
+                @for (item of arrDetailsByGiftId; track item.id) {
+                  <tr class="table-row">
+                    <td>{{ item.customerName }}</td>
+                    <td>{{ item.giftName }}</td>
+                    <td class="bold-gold">{{ item.giftPrice * item.quntity }} ₪</td>
+                  </tr>
+                }
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    }
+  </main>
+</div>

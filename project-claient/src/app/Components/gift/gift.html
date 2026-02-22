@@ -1,0 +1,60 @@
+<div class="modal-overlay" *ngIf="authSrv.isAdmin() && showAddForm" (click)="closeEdit()">
+  <div class="admin-wrapper" (click)="$event.stopPropagation()">
+    <mat-card class="luxury-form-card">
+      
+    <button type="button" class="btn-close-x" (click)="closeEdit()">
+  <mat-icon>close</mat-icon>
+</button>
+
+      <mat-card-header class="header-section">
+        <mat-card-title class="modern-title">
+          {{ id > 0 ? 'עריכת מתנה: ' + frmGift.controls['name'].value : 'הוספת מתנה חדשה' }}
+        </mat-card-title>
+        <div class="gold-divider"></div>
+      </mat-card-header>
+
+      <mat-card-content>
+        <form [formGroup]="frmGift" (ngSubmit)="addGift()" class="gift-form">
+          
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>שם המתנה</mat-label>
+            <input matInput formControlName="name" placeholder="למשל: רכב חשמלי לילדים">
+            <mat-icon matSuffix>edit</mat-icon>
+            <mat-error *ngIf="frmGift.controls['name'].invalid">שם חייב להכיל לפחות 2 תווים</mat-error>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>מחיר כרטיס (₪)</mat-label>
+            <input matInput type="number" formControlName="priceCard">
+            <mat-icon matSuffix>payments</mat-icon>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>קוד תורם</mat-label>
+            <input matInput type="number" formControlName="donorId">
+            <mat-icon matSuffix>person</mat-icon>
+            <mat-error *ngIf="frmGift.controls['donorId'].invalid">יש להזין קוד תורם תקין (מעל 0)</mat-error>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>קטגוריה</mat-label>
+            <input matInput formControlName="Category">
+            <mat-icon matSuffix>category</mat-icon>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>קישור לתמונה</mat-label>
+            <input matInput formControlName="GiftImage">
+            <mat-icon matSuffix>image</mat-icon>
+          </mat-form-field>
+
+          <button mat-raised-button type="submit" [disabled]="frmGift.invalid" class="btn-save-luxury">
+            {{ id > 0 ? 'עדכן שינויים 💾' : 'הוסף מתנה לקטלוג 🎁' }}
+          </button>
+          
+          <p class="form-hint" *ngIf="frmGift.invalid">אנא מלאי את כל שדות החובה</p>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

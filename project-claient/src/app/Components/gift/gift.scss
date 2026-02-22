@@ -1,0 +1,93 @@
+/* רקע המודאל */
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0, 15, 30, 0.7); /* כחול כהה שקוף */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  backdrop-filter: blur(10px); /* טשטוש רקע יוקרתי */
+}
+
+/* הכרטיס הלבן */
+.luxury-form-card {
+  position: relative;
+  max-width: 480px;
+  width: 90%;
+  padding: 35px !important;
+  border-radius: 25px !important;
+  background: #ffffff;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.3) !important;
+  border: 1px solid rgba(197, 160, 89, 0.2);
+}
+
+/* כפתור סגירה */
+.btn-close-x {
+  position: absolute;
+  top: 15px; left: 15px;
+  background: #f5f5f5;
+  border: none;
+  border-radius: 50%;
+  width: 35px; height: 35px;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn-close-x:hover { background: #e0e0e0; transform: rotate(90deg); }
+
+/* כותרת וזהב */
+.modern-title {
+  font-size: 1.6rem !important;
+  color: #001f3f;
+  font-weight: 800 !important;
+  text-align: center;
+  width: 100%;
+}
+.gold-divider {
+  width: 60px; height: 3px;
+  background: linear-gradient(90deg, #c5a059, #e5c07b);
+  margin: 10px auto 25px auto;
+  border-radius: 5px;
+}
+
+/* שדות קלט - ביטול החיתוך */
+.full-width { width: 100%; margin-bottom: 15px; }
+
+::ng-deep .mat-mdc-form-field-subscript-wrapper { display: none; } /* מעלים רווחים מיותרים למטה */
+
+/* כפתור השמירה היוקרתי */
+.btn-save-luxury {
+  width: 100%;
+  background: linear-gradient(135deg, #001f3f, #003366) !important;
+  color: #c5a059 !important;
+  padding: 25px !important;
+  font-size: 1.1rem !important;
+  border-radius: 15px !important;
+  border: 1px solid #c5a059 !important;
+  margin-top: 10px;
+  letter-spacing: 1px;
+}
+
+.btn-save-luxury:hover:not(:disabled) {
+  background: #c5a059 !important;
+  color: #001f3f !important;
+  box-shadow: 0 5px 15px rgba(197, 160, 89, 0.4) !important;
+}
+
+/* הכרח הצגת אייקונים (פותר את ה-image/edit שכתוב) */
+mat-icon { font-family: 'Material Icons' !important; }
+mat-icon {
+  font-family: 'Material Icons' !important;
+  font-feature-settings: 'liga'; /* זה מה שהופך את המילה close לאייקון X */
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+}

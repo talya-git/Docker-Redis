@@ -1,0 +1,59 @@
+/* הקונטיינר שתופס את כל המסך */
+.full-page-wrapper {
+    display: flex;
+    justify-content: center; /* מרכוז אופקי */
+    align-items: center;     /* מרכוז אנכי */
+    width: 100vw;            /* 100% מרוחב המסך */
+    height: 100vh;           /* 100% מגובה המסך */
+    background-color: #f8f9fa; /* צבע רקע עדין כדי שהכרטיס הלבן יבלוט */
+    margin: 0;
+    padding: 0;
+    position: fixed;         /* מבטיח שזה יכסה הכל גם אם יש גלילה */
+    top: 0;
+    left: 0;
+  }
+  
+  .login-card {
+    width: 100%;
+    max-width: 450px;        /* רוחב מקסימלי נוח לעין */
+    padding: 40px;           /* הגדלתי מעט את הריווח הפנימי למראה יוקרתי */
+    border-radius: 15px;     /* פינות מעוגלות יותר */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important; /* צל רך עמוק */
+    background: white;
+  }
+  
+  .header-section {
+    margin-bottom: 35px;
+    text-align: center;
+  }
+  
+  .login-title {
+    font-size: 32px;         /* כותרת גדולה ומרשימה */
+    font-weight: 700;
+    color: #2c3e50;
+    margin: 0 0 15px 0;
+  }
+  
+  .gold-separator {
+    height: 5px;             /* פס מעט עבה יותר */
+    width: 100px;            /* אורך קבוע ומרשים */
+    background: linear-gradient(90deg, #c5a059, #e5c07b);
+    margin: 0 auto;
+    border-radius: 50px;     /* פס "קפסולה" מעוגל */
+  }
+  
+  .login-btn {
+    width: 100%;
+    height: 55px;            /* כפתור גבוה ונוח ללחיצה */
+    background: linear-gradient(90deg, #c5a059, #e5c07b) !important;
+    color: white !important;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    margin-top: 15px;
+  }
+  
+  .full-width {
+    width: 100%;
+    margin-bottom: 15px;
+  }

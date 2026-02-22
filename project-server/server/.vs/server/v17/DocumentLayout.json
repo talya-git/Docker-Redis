@@ -1,0 +1,923 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "F:\\project-server\\server\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|f:\\project-server\\server\\server\\dal\\giftdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|solutionrelative:server\\dal\\giftdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|f:\\project-server\\server\\server\\dal\\customerdatailsdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|solutionrelative:server\\dal\\customerdatailsdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|f:\\project-server\\server\\server\\bll\\customerdatailsbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|solutionrelative:server\\bll\\customerdatailsbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|f:\\project-server\\server\\server\\controllers\\customerdetailscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|solutionrelative:server\\controllers\\customerdetailscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|f:\\project-server\\server\\server\\bll\\giftbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|solutionrelative:server\\bll\\giftbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|f:\\project-server\\server\\server\\controllers\\giftcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|solutionrelative:server\\controllers\\giftcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|f:\\project-server\\server\\server\\controllers\\donorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|solutionrelative:server\\controllers\\donorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|f:\\project-server\\server\\server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|solutionrelative:server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|f:\\project-server\\server\\server\\server.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|solutionrelative:server\\server.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|f:\\project-server\\server\\server\\bll\\donorbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|solutionrelative:server\\bll\\donorbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|f:\\project-server\\server\\server\\bll\\interfaces\\icustomerdatailsbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|solutionrelative:server\\bll\\interfaces\\icustomerdatailsbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|f:\\project-server\\server\\server\\dal\\interfaces\\icustomerdatailsdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|solutionrelative:server\\dal\\interfaces\\icustomerdatailsdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|f:\\project-server\\server\\server\\bll\\customerbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|solutionrelative:server\\bll\\customerbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|f:\\project-server\\server\\server\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|solutionrelative:server\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|f:\\project-server\\server\\server\\dto\\customerdatailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|solutionrelative:server\\dto\\customerdatailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|f:\\project-server\\server\\server\\dal\\customerdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|solutionrelative:server\\dal\\customerdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|f:\\project-server\\server\\server\\dal\\donordal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|solutionrelative:server\\dal\\donordal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|f:\\project-server\\server\\server\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|solutionrelative:server\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|f:\\project-server\\server\\server\\models\\customerdatails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|solutionrelative:server\\models\\customerdatails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|f:\\project-server\\server\\server\\models\\customermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|solutionrelative:server\\models\\customermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|f:\\project-server\\server\\server\\dto\\giftdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|solutionrelative:server\\dto\\giftdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|f:\\project-server\\server\\server\\dal\\interfaces\\igiftdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|solutionrelative:server\\dal\\interfaces\\igiftdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|f:\\project-server\\server\\server\\dal\\authdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|solutionrelative:server\\dal\\authdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|f:\\project-server\\server\\server\\dal\\interfaces\\idonordal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|solutionrelative:server\\dal\\interfaces\\idonordal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|f:\\project-server\\server\\server\\bll\\interfaces\\igiftbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|solutionrelative:server\\bll\\interfaces\\igiftbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|f:\\project-server\\server\\server\\models\\giftmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|solutionrelative:server\\models\\giftmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|f:\\project-server\\server\\server\\models\\donormodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|solutionrelative:server\\models\\donormodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|f:\\project-server\\server\\server\\dal\\lotterycontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|solutionrelative:server\\dal\\lotterycontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|f:\\project-server\\server\\server\\bll\\interfaces\\idonorbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|solutionrelative:server\\bll\\interfaces\\idonorbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|f:\\project-server\\server\\server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|solutionrelative:server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|f:\\project-server\\server\\server\\dto\\customerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|solutionrelative:server\\dto\\customerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|f:\\project-server\\server\\server\\dto\\donordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|solutionrelative:server\\dto\\donordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|f:\\project-server\\server\\server\\bll\\authbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|solutionrelative:server\\bll\\authbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|f:\\project-server\\server\\server\\bll\\interfaces\\icustomerbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|solutionrelative:server\\bll\\interfaces\\icustomerbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|f:\\project-server\\server\\server\\dto\\authdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|solutionrelative:server\\dto\\authdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|f:\\project-server\\server\\server\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|solutionrelative:server\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|f:\\project-server\\server\\server\\jwt\\jwttokengenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|solutionrelative:server\\jwt\\jwttokengenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|f:\\project-server\\server\\server\\migrations\\20251224144327_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|solutionrelative:server\\migrations\\20251224144327_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|f:\\project-server\\server\\server\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|solutionrelative:server\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\project-server\\WebApplication1\\WebApplication1\\BLL\\DonorBLL.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\project-server\\WebApplication1\\WebApplication1\\Controllers\\CustomerController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\project-server\\WebApplication1\\WebApplication1\\Controllers\\WeatherForecastController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\project-server\\WebApplication1\\WebApplication1\\Controllers\\GiftController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\project-server\\WebApplication1\\WebApplication1\\Controllers\\DonorController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\project-server\\WebApplication1\\WebApplication1\\BLL\\CustomerBLL.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\project-server\\WebApplication1\\WebApplication1\\BLL\\GiftBLL.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|f:\\project-server\\server\\server\\migrations\\20251224175458_addfailstomodels2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|solutionrelative:server\\migrations\\20251224175458_addfailstomodels2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|f:\\project-server\\server\\server\\migrations\\20251224171436_addfailstomodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|solutionrelative:server\\migrations\\20251224171436_addfailstomodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|f:\\project-server\\server\\server\\migrations\\20251224170945_db.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|solutionrelative:server\\migrations\\20251224170945_db.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|f:\\project-server\\server\\server\\migrations\\20251224170408_changeurl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|solutionrelative:server\\migrations\\20251224170408_changeurl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|f:\\project-server\\server\\server\\libman.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|solutionrelative:server\\libman.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|f:\\project-server\\server\\server\\migrations\\20251228145118_addvelidation2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|solutionrelative:server\\migrations\\20251228145118_addvelidation2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|f:\\project-server\\server\\server\\migrations\\20251228151020_addstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|solutionrelative:server\\migrations\\20251228151020_addstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|f:\\project-server\\server\\server\\migrations\\20251228145541_addcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|solutionrelative:server\\migrations\\20251228145541_addcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|f:\\project-server\\server\\server\\migrations\\20251228133420_addvelidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|solutionrelative:server\\migrations\\20251228133420_addvelidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|f:\\project-server\\server\\server\\migrations\\20251228132450_adddbs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E8A9759-DA6A-4606-8C16-1D6409E90893}|server\\server.csproj|solutionrelative:server\\migrations\\20251228132450_adddbs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "CustomerBLL.cs",
+              "DocumentMoniker": "F:\\project-server\\server\\server\\BLL\\CustomerBLL.cs",
+              "RelativeDocumentMoniker": "server\\BLL\\CustomerBLL.cs",
+              "ToolTip": "F:\\project-server\\server\\server\\BLL\\CustomerBLL.cs",
+              "RelativeToolTip": "server\\BLL\\CustomerBLL.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwBQAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T10:03:18.099Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "MappingProfile.cs",
+              "DocumentMoniker": "F:\\project-server\\server\\server\\MappingProfile.cs",
+              "RelativeDocumentMoniker": "server\\MappingProfile.cs",
+              "ToolTip": "F:\\project-server\\server\\server\\MappingProfile.cs",
+              "RelativeToolTip": "server\\MappingProfile.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwBEAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-24T16:26:52.173Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "F:\\project-server\\server\\server\\Program.cs",
+              "RelativeDocumentMoniker": "server\\Program.cs",
+              "ToolTip": "F:\\project-server\\server\\server\\Program.cs",
+              "RelativeToolTip": "server\\Program.cs",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAAAAIAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T10:08:54.11Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DonorController.cs",
+              "DocumentMoniker": "F:\\project-server\\server\\server\\Controllers\\DonorController.cs",
+              "RelativeDocumentMoniker": "server\\Controllers\\DonorController.cs",
+              "ToolTip": "F:\\project-server\\server\\server\\Controllers\\DonorController.cs",
+              "RelativeToolTip": "server\\Controllers\\DonorController.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAUwC8AAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-24T15:33:43.967Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "GiftController.cs",
+              "DocumentMoniker": "F:\\project-server\\server\\server\\Controllers\\GiftController.cs",
+              "RelativeDocumentMoniker": "server\\Controllers\\GiftController.cs",
+              "ToolTip": "F:\\project-server\\server\\server\\Controllers\\GiftController.cs",
+              "RelativeToolTip": "server\\Controllers\\GiftController.cs",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAowG4AAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-24T15:52:04.002Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GiftBLL.cs",
+              "DocumentMoniker": "F:\\project-server\\server\\server\\BLL\\GiftBLL.cs",
+              "RelativeDocumentMoniker": "server\\BLL\\GiftBLL.cs",
+              "ToolTip": "F:\\project-server\\server\\server\\BLL\\GiftBLL.cs",
+              "RelativeToolTip": "server\\BLL\\GiftBLL.cs",
+              "ViewState": "AgIAAOAAAAAAAAAAAAArwMIAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T09:52:31.674Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GiftDAL.cs",
+              "DocumentMoniker": "F:\\project-server\\server\\server\\DAL\\GiftDAL.cs",
+              "RelativeDocumentMoniker": "server\\DAL\\GiftDAL.cs",
+              "ToolTip": "F:\\project-server\\server\\server\\DAL\\GiftDAL.cs",
+              "RelativeToolTip": "server\\DAL\\GiftDAL.cs",
+              "ViewState": "AgIAAF0AAAAAAAAAAAArwFEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-24T17:35:43.89Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CustomerDetailsController.cs",
+              "DocumentMoniker": "F:\\project-server\\server\\server\\Controllers\\CustomerDetailsController.cs",
+              "RelativeDocumentMoniker": "server\\Controllers\\CustomerDetailsController.cs",
+              "ToolTip": "F:\\project-server\\server\\server\\Controllers\\CustomerDetailsController.cs",
+              "RelativeToolTip": "server\\Controllers\\CustomerDetailsController.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAwwDQAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-24T15:33:25.529Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CustomerDatailsBLL.cs",
+              "DocumentMoniker": "F:\\project-server\\server\\server\\BLL\\CustomerDatailsBLL.cs",
+              "RelativeDocumentMoniker": "server\\BLL\\CustomerDatailsBLL.cs",
+              "ToolTip": "F:\\project-server\\server\\server\\BLL\\CustomerDatailsBLL.cs",
+              "RelativeToolTip": "server\\BLL\\CustomerDatailsBLL.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAIA6wDUAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-24T16:09:43.593Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CustomerDatailsDAL.cs",
+              "DocumentMoniker": "F:\\project-server\\server\\server\\DAL\\CustomerDatailsDAL.cs",
+              "RelativeDocumentMoniker": "server\\DAL\\CustomerDatailsDAL.cs",
+              "ToolTip": "F:\\project-server\\server\\server\\DAL\\CustomerDatailsDAL.cs",
+              "RelativeToolTip": "server\\DAL\\CustomerDatailsDAL.cs",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAWwCgAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-24T16:13:47.77Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "DonorBLL.cs",
+              "DocumentMoniker": "F:\\project-server\\server\\server\\BLL\\DonorBLL.cs",
+              "RelativeDocumentMoniker": "server\\BLL\\DonorBLL.cs",
+              "ToolTip": "F:\\project-server\\server\\server\\BLL\\DonorBLL.cs",
+              "RelativeToolTip": "server\\BLL\\DonorBLL.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwBgAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T09:54:26.003Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ICustomerDatailsBLL.cs",
+              "DocumentMoniker": "F:\\project-server\\server\\server\\BLL\\Interfaces\\ICustomerDatailsBLL.cs",
+              "RelativeDocumentMoniker": "server\\BLL\\Interfaces\\ICustomerDatailsBLL.cs",
+              "ToolTip": "F:\\project-server\\server\\server\\BLL\\Interfaces\\ICustomerDatailsBLL.cs",
+              "RelativeToolTip": "server\\BLL\\Interfaces\\ICustomerDatailsBLL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-24T16:17:08.029Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ICustomerDatailsDAL.cs",
+              "DocumentMoniker": "F:\\project-server\\server\\server\\DAL\\Interfaces\\ICustomerDatailsDAL.cs",
+              "RelativeDocumentMoniker": "server\\DAL\\Interfaces\\ICustomerDatailsDAL.cs",
+              "ToolTip": "F:\\project-server\\server\\server\\DAL\\Interfaces\\ICustomerDatailsDAL.cs",
+              "RelativeToolTip": "server\\DAL\\Interfaces\\ICustomerDatailsDAL.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-24T16:15:38.805Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "server.csproj",
+              "DocumentMoniker": "F:\\project-server\\server\\server\\server.csproj",
+              "RelativeDocumentMoniker": "server\\server.csproj",
+              "ToolTip": "F:\\project-server\\server\\server\\server.csproj",
+              "RelativeToolTip": "server\\server.csproj",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAowBsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-01-26T11:14:32.203Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "CustomerDatailsDTO.cs",
+              "DocumentMoniker": "F:\\project-server\\server\\server\\DTO\\CustomerDatailsDTO.cs",
+              "RelativeDocumentMoniker": "server\\DTO\\CustomerDatailsDTO.cs",
+              "ToolTip": "F:\\project-server\\server\\server\\DTO\\CustomerDatailsDTO.cs",
+              "RelativeToolTip": "server\\DTO\\CustomerDatailsDTO.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAA1wA8AAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-24T15:11:51.607Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "CustomerDAL.cs",
+              "DocumentMoniker": "F:\\project-server\\server\\server\\DAL\\CustomerDAL.cs",
+              "RelativeDocumentMoniker": "server\\DAL\\CustomerDAL.cs",
+              "ToolTip": "F:\\project-server\\server\\server\\DAL\\CustomerDAL.cs",
+              "RelativeToolTip": "server\\DAL\\CustomerDAL.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAxwBAAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T09:47:11.134Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "DonorDAL.cs",
+              "DocumentMoniker": "F:\\project-server\\server\\server\\DAL\\DonorDAL.cs",
+              "RelativeDocumentMoniker": "server\\DAL\\DonorDAL.cs",
+              "ToolTip": "F:\\project-server\\server\\server\\DAL\\DonorDAL.cs",
+              "RelativeToolTip": "server\\DAL\\DonorDAL.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAmwEoAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T09:47:24.32Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "20251228145118_addVelidation2.cs",
+              "DocumentMoniker": "F:\\project-server\\server\\server\\Migrations\\20251228145118_addVelidation2.cs",
+              "RelativeDocumentMoniker": "server\\Migrations\\20251228145118_addVelidation2.cs",
+              "ToolTip": "F:\\project-server\\server\\server\\Migrations\\20251228145118_addVelidation2.cs",
+              "RelativeToolTip": "server\\Migrations\\20251228145118_addVelidation2.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-28T14:51:18.7Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "20251228151020_addStatus.cs",
+              "DocumentMoniker": "F:\\project-server\\server\\server\\Migrations\\20251228151020_addStatus.cs",
+              "RelativeDocumentMoniker": "server\\Migrations\\20251228151020_addStatus.cs",
+              "ToolTip": "F:\\project-server\\server\\server\\Migrations\\20251228151020_addStatus.cs",
+              "RelativeToolTip": "server\\Migrations\\20251228151020_addStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-28T15:10:20.563Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "CustomerController.cs",
+              "DocumentMoniker": "F:\\project-server\\server\\server\\Controllers\\CustomerController.cs",
+              "RelativeDocumentMoniker": "server\\Controllers\\CustomerController.cs",
+              "ToolTip": "F:\\project-server\\server\\server\\Controllers\\CustomerController.cs",
+              "RelativeToolTip": "server\\Controllers\\CustomerController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAABgAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-24T15:24:33.315Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "20251228145541_addCategory.cs",
+              "DocumentMoniker": "F:\\project-server\\server\\server\\Migrations\\20251228145541_addCategory.cs",
+              "RelativeDocumentMoniker": "server\\Migrations\\20251228145541_addCategory.cs",
+              "ToolTip": "F:\\project-server\\server\\server\\Migrations\\20251228145541_addCategory.cs",
+              "RelativeToolTip": "server\\Migrations\\20251228145541_addCategory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-28T14:55:41.774Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "GiftDTO.cs",
+              "DocumentMoniker": "F:\\project-server\\server\\server\\DTO\\GiftDTO.cs",
+              "RelativeDocumentMoniker": "server\\DTO\\GiftDTO.cs",
+              "ToolTip": "F:\\project-server\\server\\server\\DTO\\GiftDTO.cs",
+              "RelativeToolTip": "server\\DTO\\GiftDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-24T15:11:25.714Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "CustomerModel.cs",
+              "DocumentMoniker": "F:\\project-server\\server\\server\\Models\\CustomerModel.cs",
+              "RelativeDocumentMoniker": "server\\Models\\CustomerModel.cs",
+              "ToolTip": "F:\\project-server\\server\\server\\Models\\CustomerModel.cs",
+              "RelativeToolTip": "server\\Models\\CustomerModel.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAkAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T09:58:26.394Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "CustomerDatails.cs",
+              "DocumentMoniker": "F:\\project-server\\server\\server\\Models\\CustomerDatails.cs",
+              "RelativeDocumentMoniker": "server\\Models\\CustomerDatails.cs",
+              "ToolTip": "F:\\project-server\\server\\server\\Models\\CustomerDatails.cs",
+              "RelativeToolTip": "server\\Models\\CustomerDatails.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAkwAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T09:58:20.479Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "IgiftDAL.cs",
+              "DocumentMoniker": "F:\\project-server\\server\\server\\DAL\\Interfaces\\IgiftDAL.cs",
+              "RelativeDocumentMoniker": "server\\DAL\\Interfaces\\IgiftDAL.cs",
+              "ToolTip": "F:\\project-server\\server\\server\\DAL\\Interfaces\\IgiftDAL.cs",
+              "RelativeToolTip": "server\\DAL\\Interfaces\\IgiftDAL.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAADwvw0AAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-24T18:11:55.536Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "AuthDAL.cs",
+              "DocumentMoniker": "F:\\project-server\\server\\server\\DAL\\AuthDAL.cs",
+              "RelativeDocumentMoniker": "server\\DAL\\AuthDAL.cs",
+              "ToolTip": "F:\\project-server\\server\\server\\DAL\\AuthDAL.cs",
+              "RelativeToolTip": "server\\DAL\\AuthDAL.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAqwBkAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-24T14:31:33.484Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "IdonorDAL.cs",
+              "DocumentMoniker": "F:\\project-server\\server\\server\\DAL\\Interfaces\\IdonorDAL.cs",
+              "RelativeDocumentMoniker": "server\\DAL\\Interfaces\\IdonorDAL.cs",
+              "ToolTip": "F:\\project-server\\server\\server\\DAL\\Interfaces\\IdonorDAL.cs",
+              "RelativeToolTip": "server\\DAL\\Interfaces\\IdonorDAL.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAqwA0AAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-24T16:24:06.34Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "IgiftBLL.cs",
+              "DocumentMoniker": "F:\\project-server\\server\\server\\BLL\\Interfaces\\IgiftBLL.cs",
+              "RelativeDocumentMoniker": "server\\BLL\\Interfaces\\IgiftBLL.cs",
+              "ToolTip": "F:\\project-server\\server\\server\\BLL\\Interfaces\\IgiftBLL.cs",
+              "RelativeToolTip": "server\\BLL\\Interfaces\\IgiftBLL.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAIwBAAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-24T15:52:57.083Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "GiftModel.cs",
+              "DocumentMoniker": "F:\\project-server\\server\\server\\Models\\GiftModel.cs",
+              "RelativeDocumentMoniker": "server\\Models\\GiftModel.cs",
+              "ToolTip": "F:\\project-server\\server\\server\\Models\\GiftModel.cs",
+              "RelativeToolTip": "server\\Models\\GiftModel.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAgwA8AAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T09:55:59.842Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "DonorModel.cs",
+              "DocumentMoniker": "F:\\project-server\\server\\server\\Models\\DonorModel.cs",
+              "RelativeDocumentMoniker": "server\\Models\\DonorModel.cs",
+              "ToolTip": "F:\\project-server\\server\\server\\Models\\DonorModel.cs",
+              "RelativeToolTip": "server\\Models\\DonorModel.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAQwA0AAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T10:00:25.104Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "20251228133420_addVelidation.cs",
+              "DocumentMoniker": "F:\\project-server\\server\\server\\Migrations\\20251228133420_addVelidation.cs",
+              "RelativeDocumentMoniker": "server\\Migrations\\20251228133420_addVelidation.cs",
+              "ToolTip": "F:\\project-server\\server\\server\\Migrations\\20251228133420_addVelidation.cs",
+              "RelativeToolTip": "server\\Migrations\\20251228133420_addVelidation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-28T13:34:20.482Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "LotteryContext.cs",
+              "DocumentMoniker": "F:\\project-server\\server\\server\\DAL\\LotteryContext.cs",
+              "RelativeDocumentMoniker": "server\\DAL\\LotteryContext.cs",
+              "ToolTip": "F:\\project-server\\server\\server\\DAL\\LotteryContext.cs",
+              "RelativeToolTip": "server\\DAL\\LotteryContext.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAA5wAwAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T10:08:19.561Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "20251228132450_addDBS.cs",
+              "DocumentMoniker": "F:\\project-server\\server\\server\\Migrations\\20251228132450_addDBS.cs",
+              "RelativeDocumentMoniker": "server\\Migrations\\20251228132450_addDBS.cs",
+              "ToolTip": "F:\\project-server\\server\\server\\Migrations\\20251228132450_addDBS.cs",
+              "RelativeToolTip": "server\\Migrations\\20251228132450_addDBS.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-28T13:24:51.116Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "IdonorBLL.cs",
+              "DocumentMoniker": "F:\\project-server\\server\\server\\BLL\\Interfaces\\IdonorBLL.cs",
+              "RelativeDocumentMoniker": "server\\BLL\\Interfaces\\IdonorBLL.cs",
+              "ToolTip": "F:\\project-server\\server\\server\\BLL\\Interfaces\\IdonorBLL.cs",
+              "RelativeToolTip": "server\\BLL\\Interfaces\\IdonorBLL.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAABAAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-24T15:33:08.907Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "F:\\project-server\\server\\server\\appsettings.json",
+              "RelativeDocumentMoniker": "server\\appsettings.json",
+              "ToolTip": "F:\\project-server\\server\\server\\appsettings.json",
+              "RelativeToolTip": "server\\appsettings.json",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAwwA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-24T14:54:42.65Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "CustomerDTO.cs",
+              "DocumentMoniker": "F:\\project-server\\server\\server\\DTO\\CustomerDTO.cs",
+              "RelativeDocumentMoniker": "server\\DTO\\CustomerDTO.cs",
+              "ToolTip": "F:\\project-server\\server\\server\\DTO\\CustomerDTO.cs",
+              "RelativeToolTip": "server\\DTO\\CustomerDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-24T15:10:56.609Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Microsoft.Common.CurrentVersion.targets",
+              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2025-12-24T18:54:48.963Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "DonorDTO.cs",
+              "DocumentMoniker": "F:\\project-server\\server\\server\\DTO\\DonorDTO.cs",
+              "RelativeDocumentMoniker": "server\\DTO\\DonorDTO.cs",
+              "ToolTip": "F:\\project-server\\server\\server\\DTO\\DonorDTO.cs",
+              "RelativeToolTip": "server\\DTO\\DonorDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-24T15:11:12.272Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "20251224175458_addFailsToModels2.cs",
+              "DocumentMoniker": "F:\\project-server\\server\\server\\Migrations\\20251224175458_addFailsToModels2.cs",
+              "RelativeDocumentMoniker": "server\\Migrations\\20251224175458_addFailsToModels2.cs",
+              "ToolTip": "F:\\project-server\\server\\server\\Migrations\\20251224175458_addFailsToModels2.cs",
+              "RelativeToolTip": "server\\Migrations\\20251224175458_addFailsToModels2.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-24T17:54:59.213Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "20251224171436_addFailsToModels.cs",
+              "DocumentMoniker": "F:\\project-server\\server\\server\\Migrations\\20251224171436_addFailsToModels.cs",
+              "RelativeDocumentMoniker": "server\\Migrations\\20251224171436_addFailsToModels.cs",
+              "ToolTip": "F:\\project-server\\server\\server\\Migrations\\20251224171436_addFailsToModels.cs",
+              "RelativeToolTip": "server\\Migrations\\20251224171436_addFailsToModels.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-24T17:14:37.05Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "20251224170945_DB.cs",
+              "DocumentMoniker": "F:\\project-server\\server\\server\\Migrations\\20251224170945_DB.cs",
+              "RelativeDocumentMoniker": "server\\Migrations\\20251224170945_DB.cs",
+              "ToolTip": "F:\\project-server\\server\\server\\Migrations\\20251224170945_DB.cs",
+              "RelativeToolTip": "server\\Migrations\\20251224170945_DB.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-24T17:09:46.175Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "20251224170408_changeURL.cs",
+              "DocumentMoniker": "F:\\project-server\\server\\server\\Migrations\\20251224170408_changeURL.cs",
+              "RelativeDocumentMoniker": "server\\Migrations\\20251224170408_changeURL.cs",
+              "ToolTip": "F:\\project-server\\server\\server\\Migrations\\20251224170408_changeURL.cs",
+              "RelativeToolTip": "server\\Migrations\\20251224170408_changeURL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-24T17:04:09.368Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "AuthBLL.cs",
+              "DocumentMoniker": "F:\\project-server\\server\\server\\BLL\\AuthBLL.cs",
+              "RelativeDocumentMoniker": "server\\BLL\\AuthBLL.cs",
+              "ToolTip": "F:\\project-server\\server\\server\\BLL\\AuthBLL.cs",
+              "RelativeToolTip": "server\\BLL\\AuthBLL.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAC8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-24T14:57:18.64Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "IcustomerBLL.cs",
+              "DocumentMoniker": "F:\\project-server\\server\\server\\BLL\\Interfaces\\IcustomerBLL.cs",
+              "RelativeDocumentMoniker": "server\\BLL\\Interfaces\\IcustomerBLL.cs",
+              "ToolTip": "F:\\project-server\\server\\server\\BLL\\Interfaces\\IcustomerBLL.cs",
+              "RelativeToolTip": "server\\BLL\\Interfaces\\IcustomerBLL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-24T15:33:09.728Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "libman.json",
+              "DocumentMoniker": "F:\\project-server\\server\\server\\libman.json",
+              "RelativeDocumentMoniker": "server\\libman.json",
+              "ToolTip": "F:\\project-server\\server\\server\\libman.json",
+              "RelativeToolTip": "server\\libman.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-24T15:29:11.869Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "AuthDTO.cs",
+              "DocumentMoniker": "F:\\project-server\\server\\server\\DTO\\AuthDTO.cs",
+              "RelativeDocumentMoniker": "server\\DTO\\AuthDTO.cs",
+              "ToolTip": "F:\\project-server\\server\\server\\DTO\\AuthDTO.cs",
+              "RelativeToolTip": "server\\DTO\\AuthDTO.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAmwAUAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-24T14:57:05.706Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "F:\\project-server\\server\\server\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "server\\Controllers\\AuthController.cs",
+              "ToolTip": "F:\\project-server\\server\\server\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "server\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAuwCoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-24T14:56:43.217Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "JwtTokenGenerator.cs",
+              "DocumentMoniker": "F:\\project-server\\server\\server\\JWT\\JwtTokenGenerator.cs",
+              "RelativeDocumentMoniker": "server\\JWT\\JwtTokenGenerator.cs",
+              "ToolTip": "F:\\project-server\\server\\server\\JWT\\JwtTokenGenerator.cs",
+              "RelativeToolTip": "server\\JWT\\JwtTokenGenerator.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-24T14:51:46.639Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "20251224144327_InitialCreate.cs",
+              "DocumentMoniker": "F:\\project-server\\server\\server\\Migrations\\20251224144327_InitialCreate.cs",
+              "RelativeDocumentMoniker": "server\\Migrations\\20251224144327_InitialCreate.cs",
+              "ToolTip": "F:\\project-server\\server\\server\\Migrations\\20251224144327_InitialCreate.cs",
+              "RelativeToolTip": "server\\Migrations\\20251224144327_InitialCreate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-24T14:43:27.397Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "WeatherForecast.cs",
+              "DocumentMoniker": "F:\\project-server\\server\\server\\WeatherForecast.cs",
+              "RelativeDocumentMoniker": "server\\WeatherForecast.cs",
+              "ToolTip": "F:\\project-server\\server\\server\\WeatherForecast.cs",
+              "RelativeToolTip": "server\\WeatherForecast.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T10:20:49.764Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "CustomerController.cs",
+              "DocumentMoniker": "F:\\project-server\\WebApplication1\\WebApplication1\\Controllers\\CustomerController.cs",
+              "RelativeDocumentMoniker": "..\\WebApplication1\\WebApplication1\\Controllers\\CustomerController.cs",
+              "ToolTip": "F:\\project-server\\WebApplication1\\WebApplication1\\Controllers\\CustomerController.cs",
+              "RelativeToolTip": "..\\WebApplication1\\WebApplication1\\Controllers\\CustomerController.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T09:51:37.392Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "F:\\project-server\\WebApplication1\\WebApplication1\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "..\\WebApplication1\\WebApplication1\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "F:\\project-server\\WebApplication1\\WebApplication1\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "..\\WebApplication1\\WebApplication1\\Controllers\\WeatherForecastController.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T09:51:37.307Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "GiftController.cs",
+              "DocumentMoniker": "F:\\project-server\\WebApplication1\\WebApplication1\\Controllers\\GiftController.cs",
+              "RelativeDocumentMoniker": "..\\WebApplication1\\WebApplication1\\Controllers\\GiftController.cs",
+              "ToolTip": "F:\\project-server\\WebApplication1\\WebApplication1\\Controllers\\GiftController.cs",
+              "RelativeToolTip": "..\\WebApplication1\\WebApplication1\\Controllers\\GiftController.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T09:51:37.224Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "DonorController.cs",
+              "DocumentMoniker": "F:\\project-server\\WebApplication1\\WebApplication1\\Controllers\\DonorController.cs",
+              "RelativeDocumentMoniker": "..\\WebApplication1\\WebApplication1\\Controllers\\DonorController.cs",
+              "ToolTip": "F:\\project-server\\WebApplication1\\WebApplication1\\Controllers\\DonorController.cs",
+              "RelativeToolTip": "..\\WebApplication1\\WebApplication1\\Controllers\\DonorController.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T09:51:37.128Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "CustomerBLL.cs",
+              "DocumentMoniker": "F:\\project-server\\WebApplication1\\WebApplication1\\BLL\\CustomerBLL.cs",
+              "RelativeDocumentMoniker": "..\\WebApplication1\\WebApplication1\\BLL\\CustomerBLL.cs",
+              "ToolTip": "F:\\project-server\\WebApplication1\\WebApplication1\\BLL\\CustomerBLL.cs",
+              "RelativeToolTip": "..\\WebApplication1\\WebApplication1\\BLL\\CustomerBLL.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T09:48:09.775Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "GiftBLL.cs",
+              "DocumentMoniker": "F:\\project-server\\WebApplication1\\WebApplication1\\BLL\\GiftBLL.cs",
+              "RelativeDocumentMoniker": "..\\WebApplication1\\WebApplication1\\BLL\\GiftBLL.cs",
+              "ToolTip": "F:\\project-server\\WebApplication1\\WebApplication1\\BLL\\GiftBLL.cs",
+              "RelativeToolTip": "..\\WebApplication1\\WebApplication1\\BLL\\GiftBLL.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T09:48:09.69Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "DonorBLL.cs",
+              "DocumentMoniker": "F:\\project-server\\WebApplication1\\WebApplication1\\BLL\\DonorBLL.cs",
+              "RelativeDocumentMoniker": "..\\WebApplication1\\WebApplication1\\BLL\\DonorBLL.cs",
+              "ToolTip": "F:\\project-server\\WebApplication1\\WebApplication1\\BLL\\DonorBLL.cs",
+              "RelativeToolTip": "..\\WebApplication1\\WebApplication1\\BLL\\DonorBLL.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T09:48:09.591Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

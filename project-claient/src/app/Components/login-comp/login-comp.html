@@ -1,0 +1,34 @@
+<div class="full-page-wrapper">
+  <mat-card class="login-card">
+    
+    <div class="header-section">
+      <h2 class="login-title">התחברות</h2>
+      <div class="gold-separator"></div>
+    </div>
+
+    <mat-card-content>
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
+        
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>שם משתמש</mat-label>
+          <input matInput id="userName" formControlName="UserName" placeholder="הזן שם משתמש">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>סיסמה</mat-label>
+          <input matInput id="password" type="password" formControlName="Password" placeholder="הזן סיסמה">
+        </mat-form-field>
+
+        <button mat-raised-button class="login-btn" type="submit" [disabled]="loginForm.invalid">
+          התחברות
+        </button>
+
+        <div class="register-link">
+          <span>עוד לא רשום? </span>
+          <a routerLink="/register" class="gold-link">צור חשבון חדש</a>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+  
+</div>

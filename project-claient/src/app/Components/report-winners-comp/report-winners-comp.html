@@ -1,0 +1,70 @@
+<div class="grand-winners-container" dir="rtl">
+  @if (authSrv.isAdmin()) {
+    
+    <div class="epic-header">
+      <div class="title-wrapper">
+        <h1 class="main-title">HALL OF FAME</h1>
+        <div class="divider">
+          <mat-icon>star</mat-icon>
+          <mat-icon class="large">stars</mat-icon>
+          <mat-icon>star</mat-icon>
+        </div>
+        <p class="subtitle">רשימת הזוכים המאושרים במכירת הזהב</p>
+      </div>
+      
+      <div class="income-glass-card">
+        <span class="income-label">סה"כ הכנסות המכירה</span>
+        <span class="income-amount">{{ totalIncome }} ₪</span>
+      </div>
+    </div>
+
+    <div class="winners-grid">
+      @for (gift of winnersList; track gift.name) {
+        <div class="winner-card">
+          <div class="winner-ribbon">WINNER</div>
+          
+          <div class="gift-image-container">
+   <img [src]="'/' + gift.giftImage" 
+     (error)="$any($event.target).src = 'assets/gift-placeholder.png'" 
+     alt="Gift">
+            <div class="price-tag">{{ gift.priceCard }} ₪</div>
+          </div>
+
+          <div class="winner-details">
+            <div class="gift-name">{{ gift.name }}</div>
+            <div class="category-name">{{ gift.categoryName || gift.Category }}</div>
+            
+            <div class="winner-name-section">
+              <mat-icon>emoji_events</mat-icon>
+              <div class="winner-text-box">
+                <span class="winner-label">הזוכה המאושר:</span>
+                <span class="actual-name">{{ gift.customerName }}</span>
+              </div>
+            </div>
+
+            <div class="donor-footer">
+              <span class="donor">באדיבות: <strong>{{ gift.donorName }}</strong></span>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+
+    @if (winnersList.length === 0) {
+      <div class="empty-state">
+        <mat-icon class="pulse">hourglass_empty</mat-icon>
+        <h2>ההגרלה טרם החלה...</h2>
+        <p>הישארו מעודכנים, הזוכים יפורסמו כאן בקרוב!</p>
+      </div>
+    }
+
+  } @else {
+    <div class="locked-screen">
+      <div class="lock-icon-wrapper">
+        <mat-icon>lock</mat-icon>
+      </div>
+      <h2>הגישה לזוכים חסומה</h2>
+      <p>רק מנהלים מורשים יכולים לצפות בתוצאות בשלב זה.</p>
+    </div>
+  }
+</div>

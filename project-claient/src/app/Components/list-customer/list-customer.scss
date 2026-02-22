@@ -1,0 +1,89 @@
+.table-container {
+  padding: 40px;
+  background: #fbfbfb;
+  min-height: 80vh;
+
+  .header-section {
+    text-align: center;
+    margin-bottom: 30px;
+    .header-icon { font-size: 40px; height: 40px; width: 40px; color: #c5a059; }
+    h2 { font-size: 2rem; font-weight: 800; color: #333; margin: 10px 0; }
+    p { color: #888; }
+  }
+
+  .modern-table {
+    width: 100%;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    border: none;
+    
+    th {
+      background: #f8f9fa;
+      color: #333;
+      font-weight: bold;
+      padding: 20px;
+    }
+
+    td { padding: 15px 20px; border-bottom: 1px solid #f0f0f0; }
+  }
+
+  .customer-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    .avatar {
+      width: 45px;
+      height: 45px;
+      background: linear-gradient(135deg, #c5a059, #e5c07b);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(197, 160, 89, 0.3);
+    }
+
+    .name-box {
+      display: flex;
+      flex-direction: column;
+      .full-name { font-weight: 600; color: #333; }
+      .sub-text { font-size: 0.85rem; color: #999; }
+    }
+  }
+
+  .id-tag {
+    background: #f0f0f0;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+    color: #666;
+    font-size: 0.9rem;
+  }
+
+  .contact-col {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 0.9rem;
+    mat-icon { font-size: 16px; width: 16px; height: 16px; vertical-align: middle; color: #c5a059; }
+    .email-text { color: #777; }
+  }
+
+  .action-buttons {
+    display: flex;
+    gap: 10px;
+    .btn-edit { color: #c5a059; &:hover { background: rgba(197, 160, 89, 0.1); } }
+    .btn-delete { color: #f44336; &:hover { background: rgba(244, 67, 54, 0.1); } }
+  }
+
+  .access-denied-card {
+    text-align: center;
+    padding: 100px;
+    background: white;
+    border-radius: 20px;
+    mat-icon { font-size: 60px; height: 60px; width: 60px; color: #ff5252; }
+  }
+}

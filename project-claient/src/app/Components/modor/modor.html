@@ -1,0 +1,76 @@
+<div class="form-container" dir="rtl">
+  @if (authSrv.isAdmin()) {
+    <mat-card class="modern-card">
+      <mat-card-header>
+        <div class="header-icon">
+          <mat-icon>{{ id > 0 ? 'edit_note' : 'person_add' }}</mat-icon>
+        </div>
+        <mat-card-title>{{ id > 0 ? 'עדכון פרטי תורם' : 'הוספת תורם למערכת' }}</mat-card-title>
+        <mat-card-subtitle>מלא את הפרטים למטה לשמירה בסיס הנתונים</mat-card-subtitle>
+      </mat-card-header>
+
+      <mat-card-content>
+        <form [formGroup]="frmModor" class="grid-form">
+          
+          @if(frmModor.controls['id'].value > 0){
+            <mat-form-field appearance="outline" class="full-width readonly-field">
+              <mat-label>קוד תורם</mat-label>
+              <input matInput formControlName="id" readonly />
+              <mat-icon matSuffix>lock</mat-icon>
+            </mat-form-field>
+          }
+
+          <div class="row">
+            <mat-form-field appearance="outline">
+              <mat-label>שם פרטי</mat-label>
+              <input matInput formControlName="firstName" placeholder="לדוג׳: אברהם">
+              <mat-icon matSuffix>person</mat-icon>
+              @if (frmModor.controls['firstName'].touched && frmModor.controls['firstName'].invalid) {
+                <mat-error>שם פרטי חובה (מינימום 2 תווים)</mat-error>
+              }
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+              <mat-label>שם משפחה</mat-label>
+              <input matInput formControlName="lastName" placeholder="לדוג׳: כהן">
+              <mat-icon matSuffix>family_restroom</mat-icon>
+            </mat-form-field>
+          </div>
+
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>כתובת מגורים</mat-label>
+            <input matInput formControlName="address" placeholder="רחוב, עיר, מספר בית">
+            <mat-icon matSuffix>location_on</mat-icon>
+          </mat-form-field>
+
+          <div class="row">
+            <mat-form-field appearance="outline">
+              <mat-label>טלפון</mat-label>
+              <input matInput formControlName="phone" placeholder="05X-XXXXXXX">
+              <mat-icon matSuffix>phone</mat-icon>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+              <mat-label>מייל</mat-label>
+              <input matInput type="email" formControlName="email" placeholder="example@mail.com">
+              <mat-icon matSuffix>alternate_email</mat-icon>
+            </mat-form-field>
+          </div>
+        </form>
+      </mat-card-content>
+
+      <mat-card-actions>
+        <button mat-flat-button class="btn-save" [disabled]="frmModor.invalid" (click)="addModor()">
+          {{ id > 0 ? 'שמור שינויים' : 'צור תורם חדש' }}
+          <mat-icon>{{ id > 0 ? 'save' : 'add_circle' }}</mat-icon>
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  } @else {
+    <div class="unauthorized-message">
+      <mat-icon>lock</mat-icon>
+      <h3>גישה מוגבלת</h3>
+      <p>דף זה מיועד למנהלים בלבד. אנא פנה למנהל המערכת.</p>
+    </div>
+  }
+</div>

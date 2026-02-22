@@ -1,0 +1,162 @@
+$navy-dark: #0a192f;
+$navy-light: #112240;
+$gold-main: #d4af37;
+$gold-light: #fcf6ba;
+$gold-dark: #aa771c;
+$text-white: #e6f1ff;
+$text-gray: #8892b0;
+
+.luxury-dashboard {
+  min-height: 100vh;
+  background-color: $navy-dark;
+  background-image: radial-gradient(circle at top right, rgba($gold-main, 0.05), transparent),
+                    radial-gradient(circle at bottom left, rgba($gold-main, 0.05), transparent);
+  color: $text-white;
+  padding: 2rem;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+
+  .gold-gradient-text {
+    background: linear-gradient(45deg, $gold-dark, $gold-light, $gold-main);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin: 0;
+  }
+
+  .dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid rgba($gold-main, 0.2);
+    padding-bottom: 1.5rem;
+
+    .subtitle { color: $text-gray; font-size: 1.1rem; }
+
+    .refresh-btn {
+      background: transparent;
+      border: 1px solid $gold-main;
+      color: $gold-main;
+      padding: 0.8rem 1.5rem;
+      border-radius: 50px;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: rgba($gold-main, 0.1);
+        box-shadow: 0 0 15px rgba($gold-main, 0.3);
+        transform: translateY(-2px);
+      }
+    }
+  }
+
+  .luxury-card {
+    background: $navy-light;
+    border: 1px solid rgba($gold-main, 0.1);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, $gold-dark, $gold-light, $gold-dark);
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      h2, h3 { margin: 0; font-size: 1.5rem; color: $gold-light; }
+    }
+  }
+
+  .icon-box {
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    &.gold-bg { background: $gold-main; color: $navy-dark; }
+    &.gold-outline { border: 1px solid $gold-main; color: $gold-main; }
+  }
+
+  .luxury-table {
+    width: 100%;
+    border-collapse: collapse;
+
+    th {
+      text-align: right;
+      color: $gold-main;
+      padding: 1rem;
+      font-size: 0.9rem;
+      border-bottom: 1px solid rgba($gold-main, 0.2);
+    }
+
+    .table-row {
+      transition: background 0.2s;
+      &:hover { background: rgba(255, 255, 255, 0.03); }
+    }
+
+    td { padding: 1.2rem 1rem; border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+    .primary-cell { font-weight: 600; font-size: 1.1rem; }
+    .price-cell { color: $gold-light; font-weight: bold; }
+  }
+
+  .status-pill {
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+
+    &.confirmed { background: rgba(0, 200, 83, 0.1); color: #00c853; border: 1px solid #00c853; }
+    &.pending { background: rgba($gold-main, 0.1); color: $gold-main; border: 1px solid $gold-main; }
+  }
+
+  .gold-action-btn {
+    background: linear-gradient(45deg, $gold-dark, $gold-main);
+    border: none;
+    color: $navy-dark;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s;
+
+    &:hover { transform: scale(1.05); filter: brightness(1.1); }
+  }
+
+  .admin-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    @media (max-width: 992px) { grid-template-columns: 1fr; }
+  }
+
+  .total-box {
+    margin-top: 2rem;
+    text-align: left;
+    .label { color: $text-gray; margin-left: 1rem; }
+    .value { font-size: 2rem; font-weight: 800; color: $gold-main; }
+  }
+}
+
+// Animate
+.animate-fade-in {
+  animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

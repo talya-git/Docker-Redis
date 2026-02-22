@@ -1,0 +1,57 @@
+<nav class="modern-navbar">
+  <div class="nav-container">
+    <div class="nav-logo">
+      <div class="logo-text">
+        <span class="brand-main">LUXURY</span>
+        <span class="brand-sub">AUCTION</span>
+      </div>
+    </div>
+
+    <div class="nav-links">
+      <a routerLink="/home" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">
+        <mat-icon>home</mat-icon> דף הבית
+      </a>
+
+      @if(authSrv.isAdmin()) {
+        <a routerLink="/add-gift" routerLinkActive="active-link">
+          <mat-icon>add_circle</mat-icon> ניהול מתנות
+        </a>
+
+        <a routerLink="/add-donor" routerLinkActive="active-link">
+          <mat-icon>person_add</mat-icon> הוספת תורם
+        </a>
+        <a routerLink="/donor-list" routerLinkActive="active-link">
+          <mat-icon>groups</mat-icon> תורמים
+        </a>
+
+        <a routerLink="/customer-list" routerLinkActive="active-link">
+          <mat-icon>badge</mat-icon> לקוחות
+        </a>
+        <a routerLink="/reportWinners" routerLinkActive="active-link">
+          <mat-icon>emoji_events</mat-icon> זוכים
+        </a>
+      }
+
+      
+        <a routerLink="/customer-datails" class="cart-link" routerLinkActive="active-link">
+          <mat-icon matBadge="3" matBadgeColor="warn">shopping_cart</mat-icon> עגלה
+        </a>
+      
+    </div>
+
+    <div class="user-actions">
+      @if(!authSrv.isAdmin() && !authSrv.isCustomer()) {
+        <a routerLink="/login" class="btn-login">התחברות</a>
+        <a routerLink="/register" class="btn-register">הרשמה</a>
+      } @else {
+        <button mat-button (click)="authSrv.logout()" class="btn-logout">
+           <mat-icon>logout</mat-icon> התנתק
+        </button>
+      }
+    </div>
+  </div>
+</nav>
+
+<div class="page-content">
+  <router-outlet></router-outlet>
+</div>

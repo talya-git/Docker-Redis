@@ -1,0 +1,157 @@
+/* --- עיצוב דף ראשי (נשאר ללא שינוי) --- */
+::ng-deep .cdk-overlay-backdrop { display: none !important; }
+
+.main-page-container {
+  background: #ffffff !important;
+  min-height: 100vh;
+  padding: 30px 5%;
+  direction: rtl;
+}
+
+.header-section { text-align: center; margin-bottom: 30px; }
+.header-section h1 { font-size: 2.5rem; color: #001f3f; font-weight: 900; }
+.divider { width: 40px; height: 3px; background: #c5a059; margin: 10px auto; }
+
+.top-bar { display: flex; justify-content: center; gap: 15px; margin-bottom: 40px; }
+.btn-sort { background: #c5a059 !important; color: white !important; border-radius: 25px !important; }
+.btn-show-all { background: #001f3f !important; color: #c5a059 !important; border-radius: 25px !important; border: 1px solid #c5a059 !important; }
+
+.gifts-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+
+.luxury-card-small {
+  border-radius: 15px !important; box-shadow: 0 8px 20px rgba(0,31,63,0.1) !important;
+  padding: 10px !important; text-align: center; position: relative; border: 1px solid #f0f0f0 !important;
+}
+
+.category-tag {
+  position: absolute; top: 10px; left: 10px; font-size: 0.65rem; background: #f8f4eb; 
+  color: #b08e4b; padding: 2px 8px; border-radius: 5px; font-weight: bold;
+}
+
+.price-section-small { 
+  background: #001f3f; color: #c5a059; margin: 15px 0; padding: 10px; 
+  border-radius: 10px; font-size: 1.3rem; font-weight: 800; 
+}
+
+.buy-now-btn-small { width: 100% !important; background: #c5a059 !important; color: white !important; font-weight: bold !important; border-radius: 10px !important; }
+
+.admin-toolbar-compact { display: flex; justify-content: center; margin-top: 10px; gap: 10px; border-top: 1px solid #f0f0f0; padding-top: 5px; }
+.action-btn.edit { color: #1976d2 !important; }
+.action-btn.delete { color: #d32f2f !important; }
+.winner-gold { color: #d4af37 !important; transition: transform 0.2s; }
+.winner-gold:hover { transform: scale(1.2) rotate(10deg); }
+
+.gift-image-wrapper { position: relative; }
+.gift-image-wrapper.sold-out { filter: grayscale(0.5); opacity: 0.8; }
+.drawn-ribbon {
+  position: absolute; top: 10px; right: -10px; background: #d4af37; color: #001f3f; padding: 5px 20px;
+  font-weight: bold; transform: rotate(15deg); z-index: 2; box-shadow: 0 2px 5px rgba(0,0,0,0.2); font-size: 0.8rem;
+}
+
+.winner-display-box {
+  background: linear-gradient(135deg, #001f3f 0%, #003366 100%);
+  border: 1px solid #d4af37; color: #fff; border-radius: 8px; padding: 8px 12px; 
+  display: flex; align-items: center; gap: 10px; width: 100%; box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* --- טופס עדכון מודרני מוקטן (Compact Modal) --- */
+
+.modal-overlay {
+  position: fixed; inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(6px);
+  display: flex !important; justify-content: center !important; align-items: center !important;
+  z-index: 10000; direction: rtl;
+  padding: 15px;
+}
+
+.modern-modal-card {
+  background: white; 
+  width: 100%;
+  max-width: 400px; /* רווח נשימה משני הצדדים */
+  max-height: 90vh; /* מונע חיתוך גובה */
+  border-radius: 20px; 
+  box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+  overflow: hidden; 
+  display: flex;
+  flex-direction: column;
+  border: none;
+  animation: modalScale 0.25s ease-out;
+}
+
+@keyframes modalScale {
+  from { opacity: 0; transform: scale(0.97); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.modern-modal-header {
+  padding: 15px 25px; 
+  display: flex; justify-content: space-between; align-items: center;
+  border-bottom: 1px solid #f3f4f6;
+  flex-shrink: 0;
+}
+
+.gold-accent { width: 4px; height: 22px; background: #c5a059; border-radius: 10px; }
+.header-title { display: flex; align-items: center; gap: 10px; }
+.header-title h3 { margin: 0; font-weight: 800; color: #001f3f; font-size: 1.1rem; }
+
+.close-btn { color: #94a3b8; transition: color 0.2s; &:hover { color: #1e293b; } }
+
+.modern-modal-body { 
+  padding: 20px 25px; 
+  display: flex; 
+  flex-direction: column; 
+  gap: 12px; 
+  overflow-y: auto; /* מאפשר גלילה פנימית אם יש הרבה שדות */
+}
+
+.field-wrapper { display: flex; flex-direction: column; gap: 5px; }
+.input-label { font-weight: 700; color: #475569; font-size: 0.8rem; margin-right: 4px; }
+
+/* עיצוב שדות אנגולר ללא חיתוך ובגובה מותאם */
+::ng-deep .modern-field {
+  width: 100% !important;
+
+  .mdc-notched-outline__label { display: none !important; }
+  
+  .mat-mdc-text-field-wrapper {
+    background-color: #f8fafc !important;
+    border-radius: 12px !important;
+    border: 1px solid #e2e8f0 !important;
+    padding: 0 10px !important;
+    height: 46px !important; /* גובה מאוזן */
+  }
+
+  .mat-mdc-form-field-flex { align-items: center !important; padding-top: 0 !important; }
+  .mat-mdc-form-field-infix { padding: 10px 0 !important; min-height: auto !important; }
+
+  /* אייקונים בזהב */
+  .mat-mdc-form-field-icon-prefix {
+    padding-left: 8px !important;
+    mat-icon { color: #c5a059 !important; font-size: 18px; }
+  }
+
+  /* פוקוס */
+  &.mat-focused .mat-mdc-text-field-wrapper {
+    border-color: #c5a059 !important;
+    background-color: #fff !important;
+    box-shadow: 0 0 0 2px rgba(197, 160, 89, 0.1) !important;
+  }
+}
+
+.modern-modal-actions {
+  padding: 15px 25px; 
+  background: #fdfaf3;
+  display: flex; justify-content: flex-end; gap: 10px;
+  border-top: 1px solid #f1f5f9;
+  flex-shrink: 0;
+}
+
+.btn-save {
+  background: #c5a059 !important; color: white !important;
+  border-radius: 10px !important; padding: 0 25px !important;
+  font-weight: 800 !important; height: 40px !important;
+  font-size: 0.9rem !important;
+}
+
+.btn-cancel { color: #64748b !important; font-weight: 600 !important; font-size: 0.9rem !important; }

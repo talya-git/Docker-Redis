@@ -1,0 +1,104 @@
+.form-container {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+
+  .modern-card {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border: none;
+    padding: 20px;
+
+    mat-card-header {
+      margin-bottom: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+
+      .header-icon {
+        background: linear-gradient(135deg, #c5a059, #e5c07b);
+        color: white;
+        width: 60px;
+        height: 60px;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 15px;
+        mat-icon { font-size: 30px; width: 30px; height: 30px; }
+      }
+
+      mat-card-title {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #333;
+      }
+      mat-card-subtitle { font-size: 1rem; color: #888; }
+    }
+  }
+
+  .grid-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .row {
+      display: flex;
+      gap: 15px;
+      mat-form-field { flex: 1; }
+    }
+
+    .full-width { width: 100%; }
+
+    .readonly-field {
+      ::v-deep .mdc-text-field--outlined.mdc-text-field--disabled {
+        background-color: #f5f5f5;
+      }
+    }
+  }
+
+  .btn-save {
+    width: 100%;
+    padding: 25px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 12px;
+    background: linear-gradient(90deg, #c5a059, #e5c07b);
+    color: white;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+
+    &:disabled {
+      background: #e0e0e0;
+      color: #999;
+    }
+
+    &:not(:disabled):hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(197, 160, 89, 0.4);
+    }
+  }
+
+  // הודעת שגיאה/חסימה
+  .unauthorized-message {
+    text-align: center;
+    background: white;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    mat-icon { font-size: 80px; height: 80px; width: 80px; color: #ff5252; margin-bottom: 20px; }
+    h3 { font-size: 2rem; color: #333; }
+    p { color: #666; }
+  }
+}
+
+// תיקון RTL ל-Material
+::v-deep {
+  .mat-mdc-form-field-label-wrapper { text-align: right !important; }
+  .mat-mdc-form-field-infix { text-align: right !important; }
+}

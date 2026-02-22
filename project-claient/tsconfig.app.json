@@ -1,0 +1,18 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./out-tsc/app",
+    "baseUrl": "./",
+    "paths": {
+      "primeng/*": ["node_modules/primeng/*"],
+      "@primeuix/themes/*": ["node_modules/@primeuix/themes/*"]
+    },
+    "types": []
+  },
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "src/**/*.spec.ts"
+  ]
+}

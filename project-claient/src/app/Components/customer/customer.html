@@ -1,0 +1,58 @@
+<form [formGroup]="frmCostomer">
+        @if(frmCostomer.controls['id'].value > 0){
+        <div class="form-group">
+            <div class="form-label">קוד רוכש</div>
+            <div>
+                <input type="text" class="form-control" formControlName="id" />
+            </div>
+        </div>
+        }
+        <div class="form-group">
+            <div class="form-label">שם פרטי </div>
+            <div>
+                <input type="text" class="form-control" formControlName="firstName"  />
+                <div class="text-danger" *ngIf="frmCostomer.controls['firstName'].touched && frmCostomer.controls['firstName'].errors && frmCostomer.controls['firstName'].errors['required']">שדה חובה</div>
+                <div class="text-danger" *ngIf="frmCostomer.controls['firstName'].errors && frmCostomer.controls['firstName'].errors['minlength']">שם מתנה  חיב להיות לפחות 2 תווים</div>
+            </div>
+        </div>
+         <div class="form-group">
+            <div class="form-label">שם משפחה </div>
+            <div>
+                <input type="text" class="form-control" formControlName="lastName"  />
+                <div class="text-danger" *ngIf="frmCostomer.controls['lastName'].touched && frmCostomer.controls['lastName'].errors && frmCostomer.controls['lastName'].errors['required']">שדה חובה</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="form-label">כתובת </div>
+            <div>
+                <input type="text" class="form-control" formControlName="address" />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="form-label"> טלפון </div>
+            <div>
+                <input type="text" class="form-control" formControlName="phone" />
+            </div>
+        </div>
+         <div class="form-group">
+            <div class="form-label"> מייל </div>
+            <div>
+                <input type="text" class="form-control" formControlName="email" />
+            </div>
+        </div>
+         <div class="form-group">
+            <div class="form-label"> שם משתמש </div>
+            <div>
+                <input type="text" class="form-control" formControlName="userName" />
+            </div>
+        </div>
+         <div class="form-group">
+            <div class="form-label"> סיסמא </div>
+            <div>
+                <input type="text" class="form-control" formControlName="password" />
+            </div>
+        </div>
+        <button (click)="addCustomer()">הוספת רוכש</button>
+       
+ 
+        </form>

@@ -1,0 +1,163 @@
+/* --- עיצוב הטבלה (הקוד הקודם) --- */
+.modern-table {
+  width: 100%;
+  background: transparent !important;
+  border-collapse: separate;
+  border-spacing: 0 15px; /* רווח בין השורות */
+  direction: rtl;
+
+  th.mat-mdc-header-cell {
+    color: #888;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    border: none;
+    padding: 0 20px;
+  }
+
+  tr.modern-row {
+    background: white;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+
+    td.mat-mdc-cell {
+      border: none;
+      padding: 15px 20px;
+      &:first-child { border-radius: 0 15px 15px 0; }
+      &:last-child { border-radius: 15px 0 0 15px; }
+    }
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(197, 160, 89, 0.15);
+      background: #fffcf5;
+    }
+  }
+}
+
+/* אלמנטים בתוך הטבלה */
+.donor-profile {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  .avatar-circle {
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(135deg, #c5a059, #e5c07b);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 10px rgba(197, 160, 89, 0.3);
+  }
+
+  .donor-info {
+    display: flex;
+    flex-direction: column;
+    .name { font-weight: 700; color: #333; font-size: 1rem; }
+    .id-badge { font-size: 0.75rem; color: #c5a059; font-weight: 500; }
+  }
+}
+
+.contact-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #555;
+    text-decoration: none;
+    font-size: 0.9rem;
+    mat-icon { font-size: 16px; width: 16px; height: 16px; color: #c5a059; }
+    &.email { color: #888; font-size: 0.8rem; }
+  }
+}
+
+.gift-chip {
+  background: #fdf8ef;
+  color: #a68445;
+  border: 1px solid #eee1c5;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: inline-block;
+  margin: 2px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+  .btn-edit { background-color: #f1f3f4; color: #c5a059; }
+  .btn-delete { background-color: #fff1f0; color: #ff4d4f; }
+  
+  button {
+    box-shadow: none !important;
+    &:hover { transform: scale(1.1); }
+  }
+}
+
+/* --- עיצוב המודאל (התוספת החדשה) --- */
+.modal-overlay {
+  position: fixed; inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  display: flex !important; justify-content: center !important; align-items: center !important;
+  z-index: 2000; direction: rtl; padding: 20px;
+}
+
+.modern-modal-card {
+  background: white; width: 100%; max-width: 450px;
+  max-height: 90vh; border-radius: 20px;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+  display: flex; flex-direction: column; overflow: hidden;
+}
+
+.modern-modal-header {
+  padding: 15px 25px; display: flex; justify-content: space-between; align-items: center;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.gold-accent { width: 4px; height: 24px; background: #c5a059; border-radius: 4px; }
+.header-title { display: flex; align-items: center; gap: 10px; h3 { margin: 0; font-weight: 800; color: #001f3f; } }
+
+.modern-modal-body { 
+  padding: 20px 25px; display: flex; flex-direction: column; gap: 15px; overflow-y: auto; 
+}
+
+.row-flex { display: flex; gap: 15px; }
+.row-flex .field-wrapper { flex: 1; }
+
+.field-wrapper { display: flex; flex-direction: column; gap: 5px; }
+.input-label { font-weight: 700; color: #475569; font-size: 0.85rem; margin-right: 5px; }
+
+::ng-deep .modern-field {
+  .mat-mdc-text-field-wrapper {
+    background-color: #f8fafc !important;
+    border-radius: 12px !important;
+    height: 45px !important;
+  }
+  .mat-mdc-form-field-infix { padding: 10px 0 !important; min-height: auto !important; }
+  .mat-mdc-form-field-icon-prefix mat-icon { color: #c5a059 !important; font-size: 20px !important; }
+}
+
+.modern-modal-actions {
+  padding: 15px 25px; background: #fdfaf3;
+  display: flex; justify-content: flex-end; gap: 12px;
+}
+
+.btn-save-modal {
+  background: #c5a059 !important; color: white !important;
+  border-radius: 10px !important; font-weight: 700 !important;
+}
+
+.btn-cancel {
+  color: #64748b !important;
+  font-weight: 600 !important;
+}

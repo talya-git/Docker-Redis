@@ -1,0 +1,76 @@
+<div class="full-page-wrapper">
+  @if (!authSrv.getRole()) {
+    <mat-card class="register-card">
+      <div class="header-section">
+        <h2 class="register-title">יצירת חשבון חדש</h2>
+        <div class="gold-separator"></div>
+      </div>
+
+      <mat-card-content>
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+          
+          <div class="form-row">
+            <mat-form-field appearance="outline">
+              <mat-label>שם פרטי</mat-label>
+              <input matInput formControlName="FirstName">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label>שם משפחה</mat-label>
+              <input matInput formControlName="LastName">
+            </mat-form-field>
+          </div>
+
+          <div class="form-row">
+            <mat-form-field appearance="outline">
+              <mat-label>תעודת זהות</mat-label>
+              <input matInput type="number" formControlName="Id">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label>טלפון</mat-label>
+              <input matInput formControlName="Phone">
+            </mat-form-field>
+          </div>
+
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>אימייל</mat-label>
+            <input matInput type="email" formControlName="Email">
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>כתובת מגורים</mat-label>
+            <input matInput formControlName="Address">
+            <mat-icon matSuffix>location_on</mat-icon>
+          </mat-form-field>
+
+          <div class="form-row">
+            <mat-form-field appearance="outline">
+              <mat-label>שם משתמש</mat-label>
+              <input matInput formControlName="UserName">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label>סיסמה</mat-label>
+              <input matInput type="password" formControlName="Password">
+            </mat-form-field>
+          </div>
+
+          <button mat-raised-button class="submit-btn" type="submit">
+            הרשמה למערכת
+          </button>
+
+          <p class="login-link-text">
+            כבר רשום? <a routerLink="/login" class="gold-link">התחבר כאן</a>
+          </p>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  } @else {
+    <div class="already-in-box">
+      <mat-icon class="check-icon">account_circle</mat-icon>
+      <h3>הנך כבר רשום ומחובר למערכת</h3>
+      <div class="action-buttons">
+        <button mat-raised-button class="submit-btn" routerLink="/gift-list">המשך לקניות</button>
+        <button mat-stroked-button class="logout-btn" (click)="authSrv.logout()">התנתק מהמערכת</button>
+      </div>
+    </div>
+  }
+</div>

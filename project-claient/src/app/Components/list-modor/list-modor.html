@@ -1,0 +1,146 @@
+<div class="table-container" style="margin-top: 20px;">
+  <table mat-table [dataSource]="arrModor" class="modern-table">
+    
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef> קוד תורם </th>
+      <td mat-cell *matCellDef="let d">
+        <span class="id-tag">{{ d.id }}</span>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="fullName">
+      <th mat-header-cell *matHeaderCellDef> פרטי תורם </th>
+      <td mat-cell *matCellDef="let d">
+        <div class="donor-profile">
+          <div class="avatar-circle">{{ d.firstName[0] }}{{ d.lastName[0] }}</div>
+          <div class="donor-info">
+            <span class="name">{{ d.firstName }} {{ d.lastName }}</span>
+            <span class="id-badge">ID #{{ d.id }}</span>
+          </div>
+        </div>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="contact">
+      <th mat-header-cell *matHeaderCellDef> התקשרות </th>
+      <td mat-cell *matCellDef="let d">
+        <div class="contact-stack">
+          <a [href]="'tel:' + d.phone" class="contact-item">
+            <mat-icon>phone</mat-icon> {{ d.phone }}
+          </a>
+          <span class="contact-item email">
+            <mat-icon>alternate_email</mat-icon> {{ d.email }}
+          </span>
+        </div>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="address">
+      <th mat-header-cell *matHeaderCellDef> מיקום </th>
+      <td mat-cell *matCellDef="let d">
+        <div class="address-box-row">
+          <mat-icon>location_on</mat-icon>
+          <span>{{ d.address }}</span>
+        </div>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="gifts">
+      <th mat-header-cell *matHeaderCellDef> תרומות </th>
+      <td mat-cell *matCellDef="let d">
+        <div class="gift-tags">
+          @if(d.gifts && d.gifts.length > 0) {
+            @for(g of d.gifts; track g.id) {
+              <span class="gift-chip">🎁 {{ g.name }}</span>
+            }
+          } @else {
+            <span class="no-gifts">אין תרומות</span>
+          }
+        </div>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef> ניהול </th>
+      <td mat-cell *matCellDef="let d">
+        <div class="action-buttons">
+          <button mat-mini-fab class="btn-edit" (click)="updateModor(d)">
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button mat-mini-fab class="btn-delete" (click)="removeModor(d)">
+            <mat-icon>delete_sweep</mat-icon>
+          </button>
+        </div>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="email">
+      <th mat-header-cell *matHeaderCellDef> אימייל מלא </th>
+      <td mat-cell *matCellDef="let d"> {{ d.email }} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;" class="modern-row"></tr>
+  </table>
+
+  <div class="modal-overlay" *ngIf="degel > 0 && donor">
+    <div class="modern-modal-card">
+      <div class="modern-modal-header">
+        <div class="header-title">
+          <div class="gold-accent"></div>
+          <h3>עריכת פרטי תורם</h3>
+        </div>
+        <button class="close-btn" (click)="closeEdit()" style="border:none; background:none; cursor:pointer;">
+          <mat-icon>close</mat-icon>
+        </button>
+      </div>
+
+      <div class="modern-modal-body">
+        <div class="field-wrapper">
+          <span class="input-label">שם פרטי</span>
+          <mat-form-field appearance="outline" class="modern-field">
+            <mat-icon matPrefix>person</mat-icon>
+            <input matInput [(ngModel)]="donor.firstName">
+          </mat-form-field>
+        </div>
+
+        <div class="field-wrapper">
+          <span class="input-label">שם משפחה</span>
+          <mat-form-field appearance="outline" class="modern-field">
+            <mat-icon matPrefix>badge</mat-icon>
+            <input matInput [(ngModel)]="donor.lastName">
+          </mat-form-field>
+        </div>
+
+        <div class="field-wrapper">
+          <span class="input-label">כתובת</span>
+          <mat-form-field appearance="outline" class="modern-field">
+            <mat-icon matPrefix>location_on</mat-icon>
+            <input matInput [(ngModel)]="donor.address">
+          </mat-form-field>
+        </div>
+
+        <div class="field-wrapper">
+          <span class="input-label">טלפון</span>
+          <mat-form-field appearance="outline" class="modern-field">
+            <mat-icon matPrefix>phone</mat-icon>
+            <input matInput [(ngModel)]="donor.phone">
+          </mat-form-field>
+        </div>
+
+        <div class="field-wrapper">
+          <span class="input-label">אימייל</span>
+          <mat-form-field appearance="outline" class="modern-field">
+            <mat-icon matPrefix>email</mat-icon>
+            <input matInput [(ngModel)]="donor.email">
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="modern-modal-actions">
+        <button mat-button class="btn-cancel" (click)="closeEdit()">ביטול</button>
+        <button mat-raised-button class="btn-save-modal" (click)="saveUpdate()">שמור שינויים</button>
+      </div>
+    </div>
+  </div>
+</div>

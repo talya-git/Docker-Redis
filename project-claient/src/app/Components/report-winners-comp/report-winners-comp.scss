@@ -1,0 +1,147 @@
+.grand-winners-container {
+  padding: 60px 20px;
+  background: radial-gradient(circle at top, #001f3f 0%, #000814 100%); // כחול נייבי עמוק
+  min-height: 100vh;
+  color: white;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+
+  .epic-header {
+    text-align: center;
+    margin-bottom: 60px;
+
+    .main-title {
+      font-size: 4.5rem;
+      font-weight: 900;
+      letter-spacing: 8px;
+      background: linear-gradient(to bottom, #c5a059 22%, #ffeead 45%, #c5a059 78%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin: 0;
+      filter: drop-shadow(0 10px 20px rgba(0,0,0,0.5));
+    }
+
+    .divider {
+      color: #c5a059;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      margin: 20px 0;
+      .large { font-size: 45px; width: 45px; height: 45px; }
+    }
+
+    .income-glass-card {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 18px 45px;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(15px);
+      border: 1px solid rgba(197, 160, 89, 0.3);
+      border-radius: 50px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+      
+      .income-label { color: #d1d1d1; margin-left: 10px; font-weight: 300; }
+      .income-amount { color: #ffeead; font-size: 1.8rem; font-weight: bold; }
+    }
+  }
+
+  .winners-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 40px;
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+
+  .winner-card {
+    background: #001529; // כחול כהה לכרטיס
+    border-radius: 24px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(197, 160, 89, 0.2);
+
+    &:hover {
+      transform: translateY(-15px);
+      box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+      border-color: #c5a059;
+      
+      .gift-image-container img { transform: scale(1.1); }
+    }
+
+    .winner-ribbon {
+      position: absolute;
+      top: 25px;
+      right: -35px;
+      background: linear-gradient(45deg, #c5a059, #ffeead);
+      color: #000;
+      padding: 8px 45px;
+      transform: rotate(45deg);
+      font-weight: 900;
+      z-index: 10;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    .gift-image-container {
+      height: 220px;
+      overflow: hidden;
+      position: relative;
+      
+      img { width: 100%; height: 100%; object-fit: cover; transition: 0.6s ease; }
+      
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0; left: 0; width: 100%; height: 60%;
+        background: linear-gradient(to top, #001529, transparent);
+      }
+
+      .price-tag {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        background: rgba(0,0,0,0.7);
+        color: #ffeead;
+        padding: 6px 14px;
+        border-radius: 10px;
+        font-weight: bold;
+        backdrop-filter: blur(5px);
+        z-index: 5;
+      }
+    }
+
+    .winner-details {
+      padding: 25px;
+      text-align: center;
+
+      .gift-name { font-size: 1.6rem; font-weight: 800; margin-bottom: 5px; color: white; }
+      .category-name { color: #c5a059; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; }
+
+      .winner-name-section {
+        background: rgba(197, 160, 89, 0.1);
+        margin: 20px 0;
+        padding: 15px;
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        border: 1px dashed rgba(197, 160, 89, 0.3);
+
+        mat-icon { color: #ffeead; font-size: 30px; width: 30px; height: 30px; }
+        .winner-text-box {
+            display: flex;
+            flex-direction: column;
+            .winner-label { color: #c5a059; font-size: 0.75rem; }
+            .actual-name { font-size: 1.4rem; font-weight: bold; color: white; }
+        }
+      }
+
+      .donor-footer { font-size: 0.85rem; color: #8899a6; }
+    }
+  }
+}
+.gift-image-container {
+  height: 220px; /* גובה קבוע שמונע קפיצות */
+  background: #001529; /* צבע רקע שתופס את המקום עד שהתמונה עולה */
+}
