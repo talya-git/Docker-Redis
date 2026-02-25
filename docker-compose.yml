@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  api:
+    build:
+      context: ./project-server 
+    ports:
+      - "5000:8080"
+    environment:
+      - ConnectionStrings__DefaultConnection=Server=db;Database=MyDb;User Id=sa;Password=YourPassword123!;TrustServerCertificate=True
+      - Redis__ConnectionString=redis:6379
+    depends_on:
+      - db
+      - redis
+
+  db:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=YourPassword123!
+    ports:
+      - "1433:1433"
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
