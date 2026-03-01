@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Caching.Distributed;
+using System.Text.Json;
 using server.DAL;
 using server.DTO;
 using System.Collections.Generic;
@@ -17,19 +19,36 @@ public class GiftController : ControllerBase
 {
     private readonly IgiftBLL giftBLL;
     private readonly ILogger<GiftController> _logger;
+    private readonly IDistributedCache _cache;
 
-    public GiftController(IgiftBLL gift, ILogger<GiftController> logger)
+    public GiftController(IgiftBLL gift, ILogger<GiftController> logger, IDistributedCache cache)
     {
         this.giftBLL = gift;
         this._logger = logger;
+        this._cache = cache;
     }
 
     [AllowAnonymous]
     [HttpGet]
     public async Task<ActionResult<List<GiftDto>>> Get()
     {
-        _logger.LogInformation("API Request: Fetching all gifts.");
+        string cacheKey = "all_gifts_list";
+        var cachedGifts = await _cache.GetStringAsync(cacheKey);
+
+        if (!string.IsNullOrEmpty(cachedGifts))
+        {
+            var gifts = JsonSerializer.Deserialize<List<GiftDto>>(cachedGifts);
+            return Ok(gifts);
+        }
+
         var result = await this.giftBLL.Get();
+
+        var cacheOptions = new DistributedCacheEntryOptions()
+            .SetAbsoluteExpiration(TimeSpan.FromMinutes(5));
+
+        var serializedGifts = JsonSerializer.Serialize(result);
+        await _cache.SetStringAsync(cacheKey, serializedGifts, cacheOptions);
+
         return Ok(result);
     }
 
@@ -37,12 +56,10 @@ public class GiftController : ControllerBase
     [HttpGet("{id}")]
     public async Task<ActionResult<GiftDto>> GetById(int id)
     {
-        _logger.LogInformation("API: Requesting gift by ID: {Id}", id);
         var gift = await giftBLL.GetById(id);
 
         if (gift == null)
         {
-            _logger.LogWarning("API: Gift with ID {Id} not found.", id);
             return NotFound();
         }
 
@@ -53,8 +70,8 @@ public class GiftController : ControllerBase
     [HttpPost]
     public async Task<IActionResult> Post([FromBody] GiftDto gift)
     {
-        _logger.LogInformation("API Request: Creating a new gift: {GiftName}", gift?.Name);
         await giftBLL.Post(gift);
+        await _cache.RemoveAsync("all_gifts_list");
         return Ok();
     }
 
@@ -62,8 +79,8 @@ public class GiftController : ControllerBase
     [HttpPut("{id}")]
     public async Task<IActionResult> Update(int id, [FromBody] GiftDto gift)
     {
-        _logger.LogInformation("API Request: Updating gift ID: {Id}", id);
         await giftBLL.Update(id, gift);
+        await _cache.RemoveAsync("all_gifts_list");
         return Ok();
     }
 
@@ -71,8 +88,8 @@ public class GiftController : ControllerBase
     [HttpDelete("{id}")]
     public async Task<IActionResult> Delete(int id)
     {
-        _logger.LogInformation("API Request: Deleting gift ID: {Id}", id);
         await giftBLL.Delete(id);
+        await _cache.RemoveAsync("all_gifts_list");
         return Ok();
     }
 
@@ -80,7 +97,6 @@ public class GiftController : ControllerBase
     [HttpGet("by-name")]
     public async Task<ActionResult<GiftDto>> GetByName([FromQuery] string name)
     {
-        _logger.LogInformation("API Request: Search gift by name: {Name}", name);
         var result = await giftBLL.GetByName(name);
         return Ok(result);
     }
@@ -89,7 +105,6 @@ public class GiftController : ControllerBase
     [HttpGet("by-parches-count")]
     public async Task<ActionResult<List<GiftDto>>> GetByPurchasesCount([FromQuery] int num)
     {
-        _logger.LogInformation("API Request: Search gift by parches: {num}", num);
         var result = await giftBLL.GetByPurchasesCount(num);
         return Ok(result);
     }
@@ -98,7 +113,6 @@ public class GiftController : ControllerBase
     [HttpGet("by-donor")]
     public async Task<ActionResult<List<GiftDto>>> GetByDonor([FromQuery] string name)
     {
-        _logger.LogInformation("API Request: Search gift by name: {Name}", name);
         var result = await giftBLL.GetByDonor(name);
         return Ok(result);
     }
@@ -107,7 +121,6 @@ public class GiftController : ControllerBase
     [HttpPost("winner/{giftId}")]
     public async Task<ActionResult<WinnerDTO>> Winner(int giftId)
     {
-        _logger.LogInformation("API Request: Starting lottery for gift ID: {Id}", giftId);
         var winnerDto = await giftBLL.Winner(giftId);
         return Ok(winnerDto);
     }
@@ -116,7 +129,6 @@ public class GiftController : ControllerBase
     [HttpGet("reportWinners")]
     public async Task<ActionResult<List<GiftDto>>> reportWinners()
     {
-        _logger.LogInformation("API Request: Generating winners report.");
         var result = await giftBLL.reportWinners();
         return Ok(result);
     }
@@ -125,7 +137,6 @@ public class GiftController : ControllerBase
     [HttpGet("giftExpensive")]
     public async Task<ActionResult<List<GiftDto>>> giftExpensive()
     {
-        _logger.LogInformation("API Request: Fetching most expensive gift.");
         var result = await giftBLL.giftExpensive();
         return Ok(result);
     }
@@ -134,7 +145,6 @@ public class GiftController : ControllerBase
     [HttpGet("reportAchnasot")]
     public async Task<ActionResult<int>> reportAchnasot()
     {
-        _logger.LogInformation("API Request: Fetching revenue report.");
         var result = await this.giftBLL.reportAchnasot();
         return Ok(result);
     }

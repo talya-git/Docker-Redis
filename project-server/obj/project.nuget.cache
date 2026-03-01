@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "26055F6YRVQ=",
+  "dgSpecHash": "Cx6nteg2A9s=",
   "success": true,
-  "projectFilePath": "C:\\Users\\simat\\Desktop\\Docker-Redis\\project-server\\server\\server\\server.csproj",
+  "projectFilePath": "C:\\Users\\simat\\Desktop\\Docker-Redis\\project-server\\server.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\simat\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\simat\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

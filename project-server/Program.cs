@@ -13,7 +13,6 @@ using WebApplication1.BLL;
 using WebApplication1.BLL.Interfaces;
 using WebApplication1.DAL;
 using WebApplication1.DAL.Interfaces;
-using WebApplication1.DAL;
 using WebApplication1;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -43,15 +42,22 @@ builder.Services.AddScoped<JwtTokenGenerator>();
 // 3. Database Context
 // =======================
 builder.Services.AddDbContext<LotteryContext>(option =>
-    option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection") ??
-   "Data Source=SRV2\\PUPILS;Initial Catalog=talya;Integrated Security=True;Encrypt=True;Trust Server Certificate=True"));
-
-
+    option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"),
+    sqlOptions => sqlOptions.EnableRetryOnFailure(
+        maxRetryCount: 5,
+        maxRetryDelay: TimeSpan.FromSeconds(10),
+        errorNumbersToAdd: null)));
+// =======================
+// 3.1 Redis Cache
+// =======================
 builder.Services.AddStackExchangeRedisCache(options =>
 {
-    options.Configuration = builder.Configuration.GetValue<string>("Redis__ConnectionString") ?? "localhost:6379";
+    var connectionString = builder.Configuration.GetValue<string>("Redis__ConnectionString") 
+                          ?? "redis:6379"; 
+    options.Configuration = connectionString;
     options.InstanceName = "LotteryCache_";
 });
+
 // =======================
 // 4. CORS Policy
 // =======================
@@ -91,15 +97,13 @@ builder.Services.AddAuthentication(options =>
 });
 
 // =======================
-// 6. Swagger with Authorize Button
+// 6. Swagger
 // =======================
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "Lottery API", Version = "v1" });
-
-    // הגדרת האפשרות להכניס טוקן ב-Swagger
     c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
         Description = "JWT Authorization header using the Bearer scheme. Example: \"Authorization: Bearer {token}\"",
@@ -108,17 +112,12 @@ builder.Services.AddSwaggerGen(c =>
         Type = SecuritySchemeType.ApiKey,
         Scheme = "Bearer"
     });
-
     c.AddSecurityRequirement(new OpenApiSecurityRequirement
     {
         {
             new OpenApiSecurityScheme
             {
-                Reference = new OpenApiReference
-                {
-                    Type = ReferenceType.SecurityScheme,
-                    Id = "Bearer"
-                }
+                Reference = new OpenApiReference { Type = ReferenceType.SecurityScheme, Id = "Bearer" }
             },
             new string[] {}
         }
@@ -126,6 +125,32 @@ builder.Services.AddSwaggerGen(c =>
 });
 
 var app = builder.Build();
+
+// ============================================================
+// הוספה: יצירת ה-Database והטבלאות באופן אוטומטי בהרצה
+// ============================================================
+using (var scope = app.Services.CreateScope())
+{
+    var context = scope.ServiceProvider.GetRequiredService<LotteryContext>();
+    var logger = app.Logger;
+
+    for (int i = 0; i < 10; i++) // נסיון של 10 פעמים
+    {
+        try 
+        {
+            logger.LogInformation("Attempting to initialize Database...");
+            context.Database.EnsureCreated();
+            logger.LogInformation("Database is ready and tables are created!");
+            break; 
+        }
+        catch (Exception ex)
+        {
+            logger.LogWarning($"Database not ready yet (Attempt {i + 1}). Waiting...");
+            Thread.Sleep(5000); // מחכה 5 שניות
+            if (i == 9) logger.LogError($"Final error: {ex.Message}");
+        }
+    }
+}
 
 // =======================
 // 7. Middleware Pipeline
@@ -137,12 +162,9 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
 app.UseCors("AngularPolicy");
-
 app.UseAuthentication();
 app.UseAuthorization();
-
 app.MapControllers();
 
 app.Run();
